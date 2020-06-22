@@ -4,8 +4,8 @@
 # any SQUAD-like structured files and "naively" re-alligns the answers start positions
 
 import tensorflow as tf
-from arabert.preprocess_arabert import preprocess, never_split_tokens
-from arabert.tokenization import BasicTokenizer
+from preprocess_arabert import preprocess, never_split_tokens
+from tokenization import BasicTokenizer
 
 import json
 
