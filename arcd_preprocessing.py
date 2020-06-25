@@ -77,7 +77,7 @@ def main(_):
             gateway = JavaGateway.launch_gateway(classpath=FLAGS.path_to_farasa)
             farasa_segmenter = gateway.jvm.com.qcri.farasa.segmenter.Farasa()
     else:
-        farasa = None
+        farasa_segmenter = None
 
     with tf.gfile.Open(FLAGS.input_file, "r") as reader:
         input_data = json.load(reader)["data"]
@@ -108,7 +108,7 @@ def main(_):
                 )
                 if qas["answers"][0]["answer_start"] == -1:
                     tf.logging.warning(
-                        "Could not find answer for question '%d' : '%s' vs. '%s'",
+                        "Could not find answer for question '%s' : '%s' vs. '%s'",
                         qas["id"],
                         paragraph["context"],
                         qas["answers"][0]["text"],
