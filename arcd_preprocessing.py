@@ -79,12 +79,12 @@ def main(_):
             farasa_segmenter = gateway.jvm.com.qcri.farasa.segmenter.Farasa()
     else:
         farasa_segmenter = None
-
-    '''
-    with tf.gfile.Open(FLAGS.input_file, "r") as reader:
+    
+    
+   # with tf.gfile.Open(FLAGS.input_file, "r") as reader:
    
-        input_data = json.load(reader)["data"]
-    '''
+     #   input_data = json.load(reader)["data"]
+    
     input_data=pd.read_json(FLAGS.input_file)['data']
     for paragraph in input_data:
         
