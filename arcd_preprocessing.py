@@ -123,9 +123,9 @@ def main(_):
         "version": "1.1",
         "preprocess": "True",
     }
-    with tf.gfile.Open(FLAGS.output_file, "w") as writer:
-        json.dump(input_data, writer)
-
+    #with tf.gfile.Open(FLAGS.output_file, "w") as writer:
+     #   json.dump(input_data, writer)
+    input_data.to_json(FLAGS.output_file)
 
 if __name__ == "__main__":
     flags.mark_flag_as_required("input_file")
