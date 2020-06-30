@@ -28,7 +28,7 @@ import optimization
 import tokenization
 import six
 import tensorflow as tf
-import pd as pandas
+
 
 flags = tf.flags
 
