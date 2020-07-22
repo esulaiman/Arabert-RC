@@ -85,10 +85,9 @@ def main(_):
    
        input_data = json.load(reader)["data"]
     
-    for entry in input_data:
-        for paragraph in entry["paragraphs"]:
+   
     # our dataset        
-   # for paragraph in input_data:
+    for paragraph in input_data:
         
             paragraph["context"] = clean_preprocess(
                 paragraph["context"],
